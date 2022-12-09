@@ -1,6 +1,6 @@
 const grpc = require('grpc')
 const protoLoader = require('@grpc/proto-loader')
-const packageDef = protoLoader.loadSync('todo.proto', {})
+const packageDef = protoLoader.loadSync('protos/todo.proto', {})
 const grpcObject = grpc.loadPackageDefinition(packageDef)
 const todoPackage = grpcObject.todo
 
@@ -39,6 +39,6 @@ function endStream(call) {
     })
 }
 
-// createTodo()
+createTodo()
 // readTodos() 
-streamTodos()
+// streamTodos()
